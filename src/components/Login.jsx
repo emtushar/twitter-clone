@@ -120,9 +120,7 @@ function Login() {
                     onChange={(e) => setUsername(e.target.value)}
                   />
                 </>
-              ) : (
-                <></>
-              )}
+              ) : null}
               <input
                 className=" outline-none border  text-white font-medium  border-white rounded-md bg-transparent text-lg p-2 px-4"
                 type="email"
