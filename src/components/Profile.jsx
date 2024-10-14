@@ -70,17 +70,19 @@ function Profile() {
         <h1 className="font-semibold text-lg">Likes</h1>
       </div>
       <div>
-        {posts?.map((post) => (
-          <Postcard
-            key={post._id}
-            postId={post._id}
-            postImg={post?.mediaFile || ""}
-            postTweet={post?.caption || ""}
-            username={userData?.username}
-            fullName={userData?.fullName}
-            avatar={userData?.avatar}
-          />
-        ))}
+        {posts
+          ? posts.map((post) => (
+              <Postcard
+                key={post._id}
+                postId={post._id}
+                postImg={post?.mediaFile || ""}
+                postTweet={post?.caption || ""}
+                username={userData?.username}
+                fullName={userData?.fullName}
+                avatar={userData?.avatar}
+              />
+            ))
+          : null}
       </div>
     </>
   );

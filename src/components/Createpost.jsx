@@ -80,12 +80,12 @@ function Createpost({ avatar }) {
           />
         </div>
         <div className="w-full p-4 flex  justify-center">
-          {blah && (
+          {blah ? (
             <img
               src={blah}
               className="  rounded-md w-[80%] p-[1px]  h-[550px] object-cover border-4 border-black"
             />
-          )}
+          ) : null}
         </div>
         <div className="mt-2 flex justify-between px-10 ">
           {emojiPicker ? (
